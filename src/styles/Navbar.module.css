@@ -1,0 +1,182 @@
+
+
+.navbar {
+    background-color: #333;
+    position: relative;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+  
+.menuItemsContainer{
+    display: flex;
+}
+
+.logo {
+    color: #9A0680;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;  
+}
+.logo:hover {
+    color: #79018C;
+}
+  
+.menuIcon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+.navMenu {
+    display: flex;
+    align-items: center;
+}
+  
+/* .navLink {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    } */
+    
+.navLink {
+    position: relative;
+    font-size: 14px;
+    color: #fff;   
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    padding-bottom: 5px;   
+    transition: color 0.3s ease-in-out;  
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #916BBF;  
+    transition: width 0.3s ease-in-out;  
+}
+
+.navLink:hover {
+    color: #916BBF;  
+}
+
+.navLink:hover::after {
+    width: 100%;   
+}
+  
+.searchIconContainer{
+    display: none;
+}
+
+.searchInput {
+    width: 100%;
+    max-width: 400px;          
+    padding: 6px 16px;        
+    font-size: 14px;           
+    color: #fff;               
+    background-color: #1e1e1e; 
+    border: 2px solid #333;    
+    border-radius: 25px;        
+    outline: none;             
+    transition: border-color 0.3s ease, background-color 0.3s ease; 
+}
+  
+.searchInput::placeholder {
+    color: #777;               
+}
+  
+.searchInput:focus {
+    border-color: #3C3D37;     
+    background-color: #292929; 
+}
+  
+.searchInput:hover {
+    border-color: #555;        
+}
+  
+
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block;
+    }
+
+    .navMenu {
+        position: absolute;
+        top: 60px;
+        padding: 20px;
+        right: 0;
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navMenu.active {
+        transform: translateX(0);
+    }
+
+    .navLink {
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .searchInputContainer {
+        margin-right: 20px;
+        display: flex;
+    }
+
+    .searchIconContainer i{
+        font-size: 16px;
+    }
+
+    .searchInputWrapper{
+        display: flex;
+    }
+    
+    .searchInputContainer {
+        opacity: 0;
+        transform: translateX(15%);
+        transition: transform 0.5s ease;
+        pointer-events: none; 
+        margin: 0 5px;
+    }
+
+    .searchInputContainer input {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+    
+    .searchIconContainer{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        /* cursor: pointer; */
+    }
+    
+    .showSearch{
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+}
+  

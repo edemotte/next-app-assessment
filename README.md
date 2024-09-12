@@ -1,40 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## AEON - Frontend Developer Test
 
-## Getting Started
+### Introduction
 
-First, run the development server:
+This document serves as a comprehensive setup guide to help you get started with the developer assignment application built with **Next.Js**. It will walk you through the installation process and provide tips on how to make the most of the application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Clone the Github repository
+- Navigate to Project directory
+- Install dependencies by running `npm install`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Run the application locally
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- To run the application locally run the command `npm run dev`
+- Launch `http://localhost:3000`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Instructions of functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This assignment contains of three different implementations and following are the sections,
 
-## Learn More
+- Calculator
+- Navigation bar
+- Two Sum function
 
-To learn more about Next.js, take a look at the following resources:
+#### Calculator
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Run the application locally, you can see the link to **Challenge 1: Calculator** 
+- The main functionality is to accept two numbers; the calculator will add them and provide the total as the result.
+- This implementation is type-safe, so the input fields will only accept numbers.
+Note: This interface is not responsive on smaller devices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Navigation bar
 
-## Deploy on Vercel
+- When you run the application locally, the landing page will display the implemented menu.
+- The search input is static and non-functional (as per the given requirements).
+- The navigation bar is responsive and works well on mobile devices.
+- You will see a hamburger button and a close button to toggle the main menu.
+- On mobile you can click on the search icon to reveal the search input field.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Two Sum function
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- This implementation does not have a visible interface.
+- This function is designed to solve a specific problem or algorithm.
+- You can see the link to **Challenge 3: Two Sum Sorted Array**  Since this is a server-side function, you will need to check the console of the server running the application, not the browser’s developer tools console.
+- Given the assumptions in the requirements:
+- The array of integers is sorted in ascending order.
+- The array of numbers and the target number are guaranteed to have exactly one pair of numbers that add up to the target. There will be no test cases with multiple pairs that add up to the target, nor any cases with no pairs that add up to the target.
